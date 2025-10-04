@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asma Ijaz - Professional CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.3;
+            color: #000;
+            background: #fff;
+            padding: 30px 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .subtitle {
+            font-size: 10px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .contact-info {
+            font-size: 10px;
+            color: #000;
+            line-height: 1.3;
+        }
+        
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 20px;
+        }
+        
+        .left-column {
+            padding-right: 15px;
+            border-right: 1px solid #ddd;
+        }
+        
+        .right-column {
+            padding-left: 15px;
+        }
+        
+        h2 {
+            font-size: 14px;
+            color: #1a1a1a;
+            border-bottom: 1.5px solid #1a1a1a;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        h3 {
+            font-size: 11px;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+            font-weight: 700;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        
+        .summary {
+            font-size: 10px;
+            text-align: justify;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        
+        .skill-category h4 {
+            font-size: 10px;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+            font-weight: 700;
+        }
+        
+        .skill-category p {
+            font-size: 10px;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        
+        .education-item, .cert-item {
+            margin-bottom: 8px;
+        }
+        
+        .education-item h3 {
+            font-size: 10px;
+        }
+        
+        .education-details {
+            font-size: 10px;
+            color: #333;
+            line-height: 1.3;
+        }
+        
+        .cert-item-text {
+            font-size: 10px;
+            color: #1a1a1a;
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 12px;
+            page-break-inside: avoid;
+        }
+        
+        .job-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        
+        .job-title h3 {
+            margin: 0;
+        }
+        
+        .date {
+            font-size: 10px;
+            color: #333;
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        .company {
+            font-size: 10px;
+            color: #333;
+            margin-bottom: 4px;
+            font-style: italic;
+        }
+        
+        ul {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+        
+        li {
+            font-size: 10px;
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        
+        .tech-stack {
+            font-size: 9px;
+            color: #333;
+            font-style: italic;
+            margin-top: 3px;
+        }
+        
+        .award-badge {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 1px 5px;
+            border-radius: 2px;
+            font-size: 7px;
+            font-weight: 600;
+            margin-left: 5px;
+            color: #1a1a1a;
+        }
+        
+        .achievement-item {
+            padding: 6px;
+            background: #f5f5f5;
+            border-left: 2px solid #1a1a1a;
+            line-height: 1.3;
+            margin-bottom: 6px;
+            font-size: 10px;
+        }
+        
+        strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .project-tag {
+            font-size: 9px;
+            background: #f0f0f0;
+            padding: 3px 6px;
+            border-radius: 2px;
+            color: #333;
+        }
+
+        .featured-projects {
+            margin-top: 8px;
+        }
+
+        .featured-project {
+            margin-bottom: 8px;
+        }
+
+        .featured-project h4 {
+            font-size: 10px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .featured-project p {
+            font-size: 9px;
+            color: #333;
+            line-height: 1.3;
+        }
+        
+        @media print {
+            body {
+                padding: 15px 25px;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+            
+            .section, .experience-item, .project-item, .achievement-item {
+                page-break-inside: avoid;
+            }
+            
+            .award-badge {
+                background: #e0e0e0;
+            }
+
+            .contact-info a {
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Asma Ijaz</h1>
+        <div class="subtitle">React Native Developer | Expo & Native iOS/Android | Branch.io | AWS | Google Maps | WebSocket<br>Mobile UI/UX | Scalable App Architect | Blockchain | Metamask | Wallet Connect | React Native Web</div>
+        <div class="contact-info">
+            ☎ <a href="tel:03175624449">03175624449</a> | ✉ <a href="mailto:asmaijaz2955@gmail.com">asmaijaz2955@gmail.com</a><br>
+            🔗 LinkedIn: <a href="https://www.linkedin.com/in/asma-ijaz2955" target="_blank">linkedin.com/in/asma-ijaz2955</a><br>
+            📍 Rawalpindi, Punjab, Pakistan
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p class="summary">
+                    Experienced and passionate React Native Developer with a proven track record of delivering scalable, high-quality mobile applications across iOS and Android. From complex learning systems to interactive games and e-commerce apps, portfolio reflects a diverse skill set and the ability to turn ideas into polished, production-ready apps. With 3+ years of hands-on experience in native iOS/Android development, excelling at integrating third-party tools like Branch.io, Google Maps, AWS, Firebase, and WebSocket for real-time, location-aware, and cloud-powered applications. Proven ability to integrate complex backend services, including blockchain wallets (MetaMask/WalletConnect), payment gateways, WebSockets, and Firebase. Passionate about building scalable, secure, and intuitive applications, leveraging modern methodologies like Redux and Agile to ensure successful, on-time project delivery.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">
+                        <h3>Mobile Application Engineer</h3>
+                        <span class="date">November 2024 - Present</span>
+                    </div>
+                    <div class="company">Z Media Technologies | Islamabad, Pakistan</div>
+                    <p style="font-size: 10px; margin-bottom: 3px;"><strong>Team Lead</strong></p>
+                    <ul>
+                        <li>Developed cross-platform mobile and web applications using React Native and React Native Web</li>
+                        <li>Integrated blockchain wallets (WalletConnect, MetaMask) for seamless crypto transactions and DeFi interactions</li>
+                        <li>Implemented secure authentication and transaction flows for cryptocurrency operations</li>
+                        <li>Collaborated with backend teams to ensure smooth API integrations and data synchronization</li>
+                        <li>Leading mobile development team and architectural decisions</li>
+                    </ul>
+                    <p class="tech-stack">Technologies: React Native, React Native Web, WalletConnect, MetaMask, Blockchain, Web3, JavaScript, TypeScript, Branch.io, AWS, Google Maps, WebSocket</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">
+                        <h3>React Native Developer</h3>
+                        <span class="date">April 2024 - April 2025</span>
+                    </div>
+                    <div class="company">PanaceaLogics | Rawalpindi, Pakistan</div>
+                    <ul>
+                        <li>Led software development teams with expertise in major project architecture and integrations</li>
+                        <li>Applied Agile methodologies to optimize team performance and ensure timely delivery</li>
+                        <li>Delegated tasks effectively across development team to maximize productivity</li>
+                        <li>Architected and implemented scalable mobile application solutions</li>
+                        <li>Experienced in leading software development teams with expertise in major project architecture, integrations, and Agile methodologies</li>
+                    </ul>
+                    <p class="tech-stack">Technologies: React Native, Redux, REST APIs, Firebase, Agile, JavaScript, TypeScript</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">
+                        <h3>React Native Developer</h3>
+                        <span class="date">October 2023 - April 2024</span>
+                    </div>
+                    <div class="company">Codistan Ventures | Islamabad, Pakistan</div>
+                    <ul>
+                        <li>Seamlessly integrated comprehensive backend APIs supporting authentication, search filters, and dynamic lists</li>
+                        <li>Reduced UI bugs by 30% through improved code quality and testing practices</li>
+                        <li>Enhanced user experience by adhering to modern mobile UX standards</li>
+                        <li>Implemented responsive designs optimized for various mobile devices</li>
+                    </ul>
+                    <p class="tech-stack">Technologies: React Native, REST APIs, Redux, JavaScript, Firebase</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">
+                        <h3>React Native Developer</h3>
+                        <span class="date">August 2023 - October 2023</span>
+                    </div>
+                    <div class="company">Soltridge | Islamabad, Pakistan</div>
+                    <ul>
+                        <li>Developed mobile applications with focus on performance optimization</li>
+                        <li>Implemented modern UI/UX patterns and responsive designs</li>
+                    </ul>
+                    <p class="tech-stack">Technologies: React Native, JavaScript, Firebase</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">
+                        <h3>React Native Developer</h3>
+                        <span class="date">June 2023 - August 2023</span>
+                    </div>
+                    <div class="company">AL Safa Group | Islamabad, Pakistan</div>
+                    <ul>
+                        <li>Collaborated on implementing new features to enhance application functionality</li>
+                        <li>Led UI updates to align with modern design trends and best practices</li>
+                        <li>Ensured improved user engagement through intuitive interface improvements</li>
+                    </ul>
+                    <p class="tech-stack">Technologies: React Native, JavaScript, UI/UX Design</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Featured Projects</h2>
+                <div class="featured-projects">
+                    <div class="featured-project">
+                        <h4>BIIT LMS – Learning Management System</h4>
+                        <p>Designed a mobile-first education platform for managing courses, assignments, and student data.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>SurveyMonkey Integration</h4>
+                        <p>Seamlessly embedded survey creation and analytics features directly within a React Native app.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Mashwara – Advice Community App</h4>
+                        <p>Developed an interactive advice-sharing platform with real-time messaging and expert profiles.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Hazzir E-commerce</h4>
+                        <p>A full-featured shopping app with product discovery, order tracking, and smooth UI/UX.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Bizb – The Game</h4>
+                        <p>A strategy-driven mobile game with custom animations, game logic, and local data management.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Qrk – Skill Game</h4>
+                        <p>A reflex and timing-based game focused on rapid gameplay and user engagement.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Makan Manager</h4>
+                        <p>Built for restaurant owners to manage bookings, menus, and customer orders with ease.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>SPA Saloon App</h4>
+                        <p>A beauty and wellness service booking platform with scheduling, service selection, and notifications.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Dan</h4>
+                        <p>A minimal, concept-driven app with interactive storytelling elements and custom transitions.</p>
+                    </div>
+                    <div class="featured-project">
+                        <h4>Try Switch</h4>
+                        <p>Developed an app centered around dynamic UI/UX and switching experiences—ideal for A/B testing or interactive campaigns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Additional Projects Portfolio</h2>
+                <div class="projects-grid">
+                    <div class="project-tag">Saloon & Spa</div>
+                    <div class="project-tag">Makan Manager</div>
+                    <div class="project-tag">The Game</div>
+                    <div class="project-tag">TrySwitch</div>
+                    <div class="project-tag">Hazzzir</div>
+                    <div class="project-tag">DAN</div>
+                    <div class="project-tag">BIzb Store App</div>
+                    <div class="project-tag">Heros</div>
+                    <div class="project-tag">Ai Skill Game (QRK)</div>
+                    <div class="project-tag">Fintech Apps</div>
+                    <div class="project-tag">Transport Teori</div>
+                    <div class="project-tag">RunVerse</div>
+                    <div class="project-tag">Vibrant Meds Spa</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+            <div class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <div class="education-details">
+                        <strong>ARID University</strong><br>
+                        (Also known as: Barani Institute of Information Technology)<br>
+                        October 2019 - June 2023<br>
+                        CGPA: 3.80
+                    </div>
+                </div>
+                <div class="education-item">
+                    <h3>Intermediate of Computer Science (ICS)</h3>
+                    <div class="education-details">
+                        <strong>STEPS College</strong><br>
+                        August 2017 - July 2019
+                    </div>
+                </div>
+                <div class="education-item">
+                    <h3>Matriculation</h3>
+                    <div class="education-details">
+                        <strong>Govt Comprehensive Girls High Secondary School</strong><br>
+                        March 2015 - March 2017
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Top Skills</h2>
+                <div class="skill-category">
+                    <p><strong>Core Competencies:</strong> React Native Web, Blockchain, Wallet Connect, MetaMask</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <div class="skill-category">
+                    <h4>Mobile Development</h4>
+                    <p>React Native, React Native Web, Expo, Native iOS (Swift/Obj-C), Native Android (Kotlin/Java), JavaScript (ES6+), TypeScript, Redux, Java</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <p>ReactJS, HTML5, CSS3, Styled Components, Responsive Layouts, Modern UI/UX Standards</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend & APIs</h4>
+                    <p>REST APIs, WebSocket, Firebase, Real-time Communication</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Blockchain & Web3</h4>
+                    <p>WalletConnect, MetaMask, Crypto Transactions, DeFi Integrations, Blockchain Integration</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Third-Party Integrations</h4>
+                    <p>Branch.io (Deep Linking), Google Maps SDK, AWS, Payment Gateway Integration, Push Notifications</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <p>Firebase, SQLite, Local Data Management</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & Tools</h4>
+                    <p>AWS, Firebase, Branch.io</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Methodologies & Architecture</h4>
+                    <p>Agile, Scrum, Team Leadership, Project Architecture, Scalable Architecture, UX-Focused Design, App Store/Play Store Deployment</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Core Skills & Technologies</h2>
+                <ul style="font-size: 9px; line-height: 1.4;">
+                    <li>React Native – JavaScript, TypeScript</li>
+                    <li>Native Development – iOS (Swift/Obj-C), Android (Kotlin/Java)</li>
+                    <li>Branch.io, AWS, Google Maps SDK, WebSocket</li>
+                    <li>Firebase, Redux, REST APIs, Styled Components</li>
+                    <li>Real-time communication, Deep linking, Scalable architecture</li>
+                    <li>UX-Focused Design, Responsive Layouts</li>
+                    <li>App Store/Play Store Deployment</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Certifications & Awards</h2>
+                <div class="cert-item">
+                    <div class="cert-item-text"><strong>• Appreciation International Award</strong><br>
+                    Professional Recognition | 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-item-text">• AI Workshop Certification<br>
+                    Advanced AI Technologies</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Key Achievements</h2>
+                <div class="achievement-item">
+                    <strong>International Recognition</strong><br>
+                    Received Appreciation International Award
+                </div>
+                <div class="achievement-item">
+                    <strong>UI/UX Enhancement</strong><br>
+                    Reduced UI bugs by 30%
+                </div>
+                <div class="achievement-item">
+                    <strong>Blockchain Integration</strong><br>
+                    Successfully integrated crypto wallets
+                </div>
+                <div class="achievement-item">
+                    <strong>Team Leadership</strong><br>
+                    Led development teams using Agile
+                </div>
+                <div class="achievement-item">
+                    <strong>Project Portfolio</strong><br>
+                    Delivered 13+ personal projects
+                </div>
+                <div class="achievement-item">
+                    <strong>Scalable Applications</strong><br>
+                    Built production-ready apps with high quality
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Languages</h2>
+                <div class="education-details">
+                    <strong>English</strong><br>
+                    Full Professional Proficiency
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
